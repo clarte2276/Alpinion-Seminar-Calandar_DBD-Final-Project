@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: var(--text);
+}
+
+.monthNav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.secondary {
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 160ms ease, border-color 120ms ease;
+}
+
+.secondary:hover {
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
+  transform: translateY(-1px);
+}
+
+.monthTitle {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.primary {
+  background: linear-gradient(120deg, #60a5fa, #3b82f6);
+  color: #0b1224;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 10px 28px rgba(59, 130, 246, 0.28);
+}
+
+.primary:hover {
+  filter: brightness(1.02);
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.cell {
+  min-height: 120px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--card-border);
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.cell:hover {
+  border-color: rgba(96, 165, 250, 0.6);
+  transform: translateY(-2px);
+}
+
+.disabled {
+  opacity: 0.45;
+}
+
+.today {
+  border-color: #60a5fa;
+  box-shadow: 0 8px 24px rgba(96, 165, 250, 0.25);
+}
+
+.dateLabel {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.eventButton {
+  text-align: left;
+  background: rgba(34, 211, 238, 0.15);
+  color: var(--text);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 10px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.eventButton:hover {
+  background: rgba(34, 211, 238, 0.22);
+  transform: translateY(-1px);
+}
+
+.error {
+  color: #fca5a5;
+}

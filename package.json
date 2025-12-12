@@ -1,0 +1,13 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run dev --prefix front\" \"npm start --prefix back\"",
+    "start:front": "npm run dev --prefix front",
+    "start:back": "npm start --prefix back"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

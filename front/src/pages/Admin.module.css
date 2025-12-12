@@ -1,0 +1,230 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 120ms ease, box-shadow 160ms ease, border-color 120ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 10px 40px rgba(32, 59, 119, 0.35);
+}
+
+.primary {
+  background: linear-gradient(120deg, #60a5fa, #3b82f6);
+  color: #0b1224;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--card-border);
+  vertical-align: top;
+  color: var(--text);
+}
+
+.table th {
+  background: rgba(255, 255, 255, 0.04);
+  text-align: left;
+  font-weight: 700;
+}
+
+.table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table tr:hover {
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.actions button {
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 160ms ease, border-color 120ms ease;
+}
+
+.actions button:hover {
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
+  transform: translateY(-1px);
+}
+
+.danger {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  border-color: #ef4444;
+  color: #0b1224;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35);
+}
+
+.secondary {
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.compatList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.15);
+  color: #e2e8f0;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.checkboxInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.error {
+  color: #fca5a5;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.formField input {
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 18px;
+  width: min(640px, 92vw);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--card-border);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalBody {
+  max-height: 360px;
+  overflow: auto;
+  padding: 6px 2px;
+}
+
+.modalList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
